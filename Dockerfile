@@ -6,7 +6,7 @@ RUN mkdir /data
 WORKDIR /data
 
 #Copy src, include folders and rebar.config
-COPY src src/
+COPY apps/shping/src src/
 # COPY include include/
 COPY rebar.config .
 #Build the release
