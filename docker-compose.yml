@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  erlang-service:
+    build: .
+    ports:
+      - "8080:8080" # Assuming Erlang app runs on port 8080

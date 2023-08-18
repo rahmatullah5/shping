@@ -11,6 +11,9 @@
 -export([stop/1]).
 
 start(_StartType, _StartArgs) ->
+    {ok, _} = application:ensure_all_started(ranch),
+    {ok, _} = application:ensure_all_started(cowboy),
+
     Dispatch = cowboy_router:compile([
         {'_', [{"/", shping_handler, []}]}
     ]),
